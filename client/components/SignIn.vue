@@ -6,8 +6,6 @@ const {
   public: { passageAppId },
 } = useRuntimeConfig();
 
-console.log(`================== PASSAGE APP ID: ${passageAppId}`);
-
 const { getUser } = usePassageUser();
 
 const onLoginDone = async (authResult: authResult) => {

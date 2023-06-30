@@ -1,7 +1,7 @@
 <template>
   <div>
     <section
-      class="bg-cover bg-center bg-no-repeat bg-[url('/assets/images/home-page.jpeg')] bg-gray-500 bg-blend-multiply"
+      class="bg-cover bg-center bg-image bg-no-repeat bg-gray-500 bg-blend-multiply"
     >
       <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-48">
         <h1
@@ -108,3 +108,9 @@
     </UContainer>
   </div>
 </template>
+
+<style scoped>
+.bg-image {
+  background-image: url('~/assets/images/home-page.jpeg');
+}
+</style>
