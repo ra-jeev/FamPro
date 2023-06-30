@@ -1,0 +1,57 @@
+{
+    "projectId": "6484969639dbb59870ac",
+    "projectName": "FamPro",
+    "functions": [
+        {
+            "$id": "6489fc24250912c946ee",
+            "name": "OnJarCreated",
+            "runtime": "node-16.0",
+            "path": "functions/OnJarCreated",
+            "entrypoint": "src/index.js",
+            "ignore": [
+                "node_modules",
+                ".npm"
+            ],
+            "execute": [],
+            "events": [
+                "databases.*.collections.6489bdfd1dd44443bdf9.documents.*.create"
+            ],
+            "schedule": "",
+            "timeout": 60
+        },
+        {
+            "$id": "648a1bc0dea871f2bdf2",
+            "name": "DepositPocketMonies",
+            "runtime": "node-16.0",
+            "path": "functions/DepositPocketMonies",
+            "entrypoint": "src/index.js",
+            "ignore": [
+                "node_modules",
+                ".npm"
+            ],
+            "execute": [],
+            "events": [],
+            "schedule": "0 0 * * *",
+            "timeout": 900
+        },
+        {
+            "$id": "648a2bad0c1720d15771",
+            "name": "OnTransaction",
+            "runtime": "node-16.0",
+            "path": "functions/OnTransaction",
+            "entrypoint": "src/index.js",
+            "ignore": [
+                "node_modules",
+                ".npm"
+            ],
+            "execute": [],
+            "events": [
+                "databases.*.collections.6489be1138708866cb36.documents.*.create",
+                "databases.*.collections.6489be1138708866cb36.documents.*.update",
+                "databases.*.collections.6489be1138708866cb36.documents.*.delete"
+            ],
+            "schedule": "",
+            "timeout": 60
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxthq/ui": "^2.4.1",
+    "@types/node": "^18",
+    "nuxt": "^3.6.0",
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "@passageidentity/passage-elements": "^1.9.3",
+    "@passageidentity/passage-node": "^2.3.2",
+    "appwrite": "^11.0.0",
+    "node-appwrite": "9.0.0"
+  }
+}
