@@ -1,3 +1,4 @@
+import { UserObject } from '@passageidentity/passage-node';
 import { protectRoute, createUser, updateUser } from '../usePassage';
 import { useAppwrite } from '../useAppwrite';
 
@@ -151,19 +152,16 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  const userId = event.context.auth.userId;
-  console.log(`got some auth user: ${userId}`);
+  const user = event.context.auth.user as UserObject;
+  console.log(`got some auth user: ${user}`);
 
   const origin = getHeader(event, 'origin');
-  const host = getHeader(event, 'host');
-
-  console.log(`origin is: ${origin}, host: ${host}`);
 
   let data;
   if (body.type === 'CREATE') {
-    data = await createFamily(userId, origin || '', body);
+    data = await createFamily(user.id, origin || '', body);
   } else {
-    data = await addFamilyMembers(userId, origin || '', body);
+    data = await addFamilyMembers(user.id, origin || '', body);
   }
 
   return {
